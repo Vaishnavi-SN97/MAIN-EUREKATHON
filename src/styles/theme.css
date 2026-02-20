@@ -1,0 +1,202 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  
+  /* Retro Pixel Theme Colors */
+  --retro-bg: #1a0a2e;
+  --retro-purple: #16213e;
+  --retro-blue: #0f3460;
+  --retro-cyan: #00d9ff;
+  --retro-green: #00ff88;
+  --retro-pink: #ff006e;
+  --retro-yellow: #ffbe0b;
+  
+  --background: #1a0a2e;
+  --foreground: #ffffff;
+  --card: #16213e;
+  --card-foreground: #ffffff;
+  --popover: #16213e;
+  --popover-foreground: #ffffff;
+  --primary: #00ff88;
+  --primary-foreground: #1a0a2e;
+  --secondary: #00d9ff;
+  --secondary-foreground: #1a0a2e;
+  --muted: #0f3460;
+  --muted-foreground: #8892b0;
+  --accent: #ff006e;
+  --accent-foreground: #ffffff;
+  --destructive: #ff006e;
+  --destructive-foreground: #ffffff;
+  --border: #00ff88;
+  --input: transparent;
+  --input-background: #16213e;
+  --switch-background: #0f3460;
+  --font-weight-medium: 400;
+  --font-weight-normal: 400;
+  --ring: #00ff88;
+  --chart-1: #00ff88;
+  --chart-2: #00d9ff;
+  --chart-3: #ff006e;
+  --chart-4: #ffbe0b;
+  --chart-5: #8b00ff;
+  --radius: 0px;
+  --sidebar: #16213e;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #00ff88;
+  --sidebar-primary-foreground: #1a0a2e;
+  --sidebar-accent: #0f3460;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #00ff88;
+  --sidebar-ring: #00ff88;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Retro Colors */
+  --color-retro-bg: var(--retro-bg);
+  --color-retro-purple: var(--retro-purple);
+  --color-retro-blue: var(--retro-blue);
+  --color-retro-cyan: var(--retro-cyan);
+  --color-retro-green: var(--retro-green);
+  --color-retro-pink: var(--retro-pink);
+  --color-retro-yellow: var(--retro-yellow);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    image-rendering: pixelated;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+
+/* Retro Pixel Effects */
+.pixel-border {
+  border: 4px solid currentColor;
+  box-shadow: 0 0 0 2px #1a0a2e;
+}
+
+.pixel-shadow {
+  box-shadow: 
+    4px 4px 0 #00ff88,
+    8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glow-green {
+  box-shadow: 
+    0 0 10px #00ff88,
+    0 0 20px #00ff88,
+    0 0 30px #00ff88;
+}
+
+.glow-pink {
+  box-shadow: 
+    0 0 10px #ff006e,
+    0 0 20px #ff006e,
+    0 0 30px #ff006e;
+}
+
+.scanline {
+  position: relative;
+}
+
+.scanline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+}
